@@ -10,4 +10,5 @@ abstract class Appcolors {
   static const text = Color(0xFF2B2B2B);
   static const hint = Color(0xFF6A6A6A);
   static const subTextDark = Color(0xFF707B81);
+  static const filllColors = Color(0xFFF7F7F9);
 }
