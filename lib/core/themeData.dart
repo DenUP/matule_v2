@@ -9,6 +9,7 @@ final themeData = ThemeData(
       titleMedium: TextStyle(fontSize: 16, color: Appcolors.text)),
   buttonTheme: ButtonThemeData(
     buttonColor: Appcolors.accent,
+    textTheme: ButtonTextTheme.normal,
     shape: Border.all(
       width: 14,
       color: Appcolors.accent,
