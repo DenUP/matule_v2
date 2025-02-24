@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:matule_v2/core/app_color.dart';
+import 'package:matule_v2/core/widget/show_dialog.dart';
 import 'package:matule_v2/features/login/login_model.dart';
 import 'package:provider/provider.dart';
 
@@ -113,7 +114,7 @@ class LoginScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width,
                       child: ElevatedButton(
                           onPressed: () {
-                            // if(!M)
+                            showDialogMessage(context, 'Ошибка', 'Имейл');
                           },
                           style: ElevatedButton.styleFrom(
                               foregroundColor: AppColor.background,
