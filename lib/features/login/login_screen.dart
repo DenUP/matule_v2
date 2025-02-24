@@ -114,7 +114,15 @@ class LoginScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width,
                       child: ElevatedButton(
                           onPressed: () {
-                            showDialogMessage(context, 'Ошибка', 'Имейл');
+                            if (!model.validateEmail()) {
+                              showDialogMessage(
+                                  context, 'Ошибка', 'Введите корретный Email');
+                            } else if (!model.allValidate()) {
+                              showDialogMessage(
+                                  context, 'Ошибка', 'Введите все поля');
+                            } else {
+                              Navigator.pushNamed(context, '/home');
+                            }
                           },
                           style: ElevatedButton.styleFrom(
                               foregroundColor: AppColor.background,
