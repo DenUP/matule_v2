@@ -23,10 +23,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Категории'),
+        title: const Text('Категории'),
       ),
       body: model.isLoading
-          ? Center(child: CircularProgressIndicator())
+          ? const Center(child: CircularProgressIndicator())
           : model.listCategory.isEmpty
               ? Center(child: Text('Нет данных'))
               : ListView.builder(

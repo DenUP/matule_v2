@@ -2,14 +2,14 @@ import 'package:flutter/foundation.dart';
 import 'package:matule_v2/core/service/supabase_fetch.dart';
 
 class HomeModel extends ChangeNotifier {
-  final SupabaseFetch _supabaseFetch;
   List<Map<String, dynamic>> _listCategory = [];
   bool _isLoading = false;
 
-  HomeModel(this._supabaseFetch);
+  HomeModel();
 
   List<Map<String, dynamic>> get listCategory => _listCategory;
   bool get isLoading => _isLoading;
+  final _supabaseFetch = SupabaseFetch();
 
   Future<void> fetchCategory() async {
     _isLoading = true;

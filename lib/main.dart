@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:matule_v2/core/app_theme.dart';
+import 'package:matule_v2/features/favorite/favorite_screen.dart';
 import 'package:matule_v2/features/home/home_model.dart';
 import 'package:matule_v2/features/home/home_screen.dart';
 import 'package:matule_v2/features/login/login_model.dart';
@@ -28,14 +29,17 @@ class App extends StatelessWidget {
     return MaterialApp(
       theme: appTheme,
       debugShowCheckedModeBanner: false,
-      initialRoute: '/home',
+      initialRoute: '/favorite',
       routes: {
         '/': (context) => ChangeNotifierProvider(
               child: const LoginScreen(),
               create: (context) => LoginModel(),
             ),
         '/home': (context) => ChangeNotifierProvider(
-            create: (context) => HomeModel(), child: const HomeScreen()),
+              create: (context) => HomeModel(),
+              child: const HomeScreen(),
+            ),
+        '/favorite': (context) => const FavoriteScreen()
       },
     );
   }
